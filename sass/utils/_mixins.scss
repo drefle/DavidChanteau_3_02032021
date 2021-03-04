@@ -1,0 +1,19 @@
+@mixin centrer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin nouveau{
+    content:"Nouveau";
+    @include centrer;
+    font-family: map-get($font-family, gras);
+    font-size: map-get($font-size, nombrenouveau);
+    padding:.3rem .7rem;
+    background-color: $color-bgnouveau;
+    color:$color-textnouveau;
+    position: absolute;
+    top:.7rem;
+    right:.7rem;
+    border-radius: 2px;
+}

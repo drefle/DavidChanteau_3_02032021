@@ -1,0 +1,35 @@
+footer{
+    background-color: $color-bgfooter;
+    padding:1.5rem 1rem;
+    color: white;
+    img{
+        filter: invert(1);
+        width: 25%;
+        margin-bottom: 1rem;
+    }
+    ul{
+        display: grid;
+        grid-row-gap: 0.4rem;
+        font-size: map-get($font-size, footerstep);
+        li{
+            display: inline-flex;
+            p{
+                font-family: map-get($font-family, text);
+
+            }
+            i{
+                margin-right: 0.3rem;
+                width: 20px;
+                font-size: 0.8rem;
+            }
+            
+        }
+        li:nth-child(1) > p{
+            font-family: map-get($font-family, liens);
+        }
+        li:nth-child(2) > p{
+            font-family:map-get($font-family, liens);
+        }
+    }
+
+}

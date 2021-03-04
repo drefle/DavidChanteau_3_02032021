@@ -1,0 +1,19 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:.public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drefle/DavidChanteau_3_02032021.git"
+  },
+  "author": "David Chanteau",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drefle/DavidChanteau_3_02032021/issues"
+  },
+  "homepage": "https://github.com/drefle/DavidChanteau_3_02032021#readme"
+}

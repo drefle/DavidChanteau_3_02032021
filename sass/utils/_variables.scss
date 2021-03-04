@@ -1,0 +1,13 @@
+$color-primary: #9356DC;
+$color-secondary:#FF79DA;
+$color-tertiary:#99E2D0;
+$color-textnouveau:rgb(19, 146, 115);
+$color-bgnouveau:rgb(153, 226, 208);
+$color-bgfooter:#3a3a3a;
+$color-lightgrey:rgb(243, 243, 243);
+
+$gradient-btn:linear-gradient(172deg, $color-secondary 0%, $color-primary 100%, rgba(255,255,255,1) 100%);
+$gradient-heart:linear-gradient(5deg, $color-secondary 19%, $color-primary 87%);
+
+$font-family:(text:Roboto-Thin, gras:Roboto-Bold, liens:Roboto-Regular);
+$font-size:(footerstep:.9rem, nombrenouveau:.7rem, localisation:.8rem);
