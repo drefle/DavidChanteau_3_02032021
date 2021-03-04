@@ -1,0 +1,284 @@
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header img {
+  margin: 1rem;
+  width: 40%;
+}
+
+footer {
+  background-color: #3a3a3a;
+  padding: 1.5rem 1rem;
+  color: white;
+}
+footer img {
+  filter: invert(1);
+  width: 25%;
+  margin-bottom: 1rem;
+}
+footer ul {
+  display: grid;
+  grid-row-gap: 0.4rem;
+  font-size: 0.9rem;
+}
+footer ul li {
+  display: inline-flex;
+}
+footer ul li p {
+  font-family: Roboto-Thin;
+}
+footer ul li i {
+  margin-right: 0.3rem;
+  width: 20px;
+  font-size: 0.8rem;
+}
+footer ul li:nth-child(1) > p {
+  font-family: Roboto-Regular;
+}
+footer ul li:nth-child(2) > p {
+  font-family: Roboto-Regular;
+}
+
+.localisation {
+  background-color: #E0E0E0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.localisation div {
+  width: 40%;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding: 0.8rem;
+  color: #535353;
+}
+.localisation div i {
+  justify-self: start;
+}
+.localisation div p {
+  justify-self: center;
+  font-family: Roboto-Bold;
+  font-size: 0.8rem;
+}
+
+.goToRestaurants {
+  background-color: #f3f3f3;
+  text-align: center;
+  padding: 2rem 3rem;
+  align-items: center;
+}
+.goToRestaurants__text {
+  font-family: Roboto-Thin;
+  font-weight: 700;
+  margin: 1rem 0 2rem 0;
+}
+
+.fonctionnement {
+  padding: 3rem 1rem 2rem 1rem;
+}
+.fonctionnement__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2rem;
+  padding: 2rem 0 2rem 0;
+}
+.fonctionnement__list .list__step {
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.23);
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  border-radius: 15px;
+  background-color: #f3f3f3;
+  padding: 1.5rem 2rem;
+  margin-left: 10px;
+  align-items: flex-end;
+}
+.fonctionnement__list .list__step i {
+  color: #707070;
+}
+.fonctionnement__list .list__step__text {
+  margin-left: 1rem;
+  font-family: Roboto-Bold;
+  font-size: 0.9rem;
+}
+.fonctionnement__list .list__step__number {
+  font-size: 0.7rem;
+  font-family: Roboto-Regular;
+  position: absolute;
+  background: #9356DC;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  left: calc(1rem + 1px);
+}
+
+.fonctionnement__list :nth-child(3n) i {
+  color: #9356DC;
+}
+
+.restaurants {
+  padding: 3rem 1rem 2rem 1rem;
+  background-color: #f3f3f3;
+}
+.restaurants__list {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2rem;
+  margin: 2rem 0;
+}
+.restaurants .list__card {
+  height: 15rem;
+  border-radius: 15px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.restaurants .list__card picture {
+  height: 70%;
+}
+.restaurants .list__card picture img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.restaurants .list__card .card__footer {
+  padding: 1rem 1rem 1rem 0.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.restaurants .list__card .card__footer .heart-container {
+  justify-self: end;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+.restaurants .list__card .card__footer .heart-clip {
+  display: block;
+  width: 100%;
+  height: 100%;
+  clip-path: path("M20,35.09,4.55,19.64a8.5,8.5,0,0,1-.13-12l.13-.13a8.72,8.72,0,0,1,12.14,0L20,10.79l3.3-3.3a8.09,8.09,0,0,1,5.83-2.58,8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.13,12l-.13.13Z");
+  transform: scale(0.75);
+}
+.restaurants .list__card .card__footer .heart-clip:hover {
+  animation: pulse 0.6s forwards;
+}
+.restaurants .list__card .card__footer .heart-clip:hover::before {
+  transform: scale(1);
+  opacity: 1;
+}
+.restaurants .list__card .card__footer .heart-clip::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: linear-gradient(5deg, #FF79DA 19%, #9356DC 87%);
+  transform: scale(0);
+  transition: transform 0.2s linear, opacity 0.2s linear;
+}
+.restaurants .list__card .card__footer .heart {
+  transform: scale(0.75);
+  position: absolute;
+  background-color: black;
+  clip-path: path("M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z");
+}
+.restaurants .list__card .card__footer .footer__descriptif {
+  font-size: 0.9rem;
+}
+.restaurants .list__card .card__footer .footer__descriptif h3 {
+  font-family: Roboto-Bold;
+}
+.restaurants .list__card .card__footer .footer__descriptif p {
+  margin-top: 0.3rem;
+  font-family: Roboto-Thin;
+  font-weight: 700;
+}
+.restaurants .list__card:nth-child(1)::after {
+  content: "Nouveau";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto-Bold;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  background-color: #99e2d0;
+  color: #139273;
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  border-radius: 2px;
+}
+.restaurants .list__card:nth-child(2)::after {
+  content: "Nouveau";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Roboto-Bold;
+  font-size: 0.7rem;
+  padding: 0.3rem 0.7rem;
+  background-color: #99e2d0;
+  color: #139273;
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  border-radius: 2px;
+}
+
+.btn {
+  background: linear-gradient(172deg, #FF79DA 0%, #9356DC 100%, white 100%);
+  color: white;
+  padding: 0.8rem;
+  border-radius: 2rem;
+  border: none;
+  outline: none;
+  font-family: Roboto-Regular;
+  box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.23);
+  margin-bottom: 1rem;
+}
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url("Roboto-Regular.ttf");
+}
+@font-face {
+  font-family: "Roboto-Thin";
+  src: url("Roboto-Thin.ttf");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("Roboto-Bold.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+a {
+  color: inherit;
+}
+
+h2 {
+  font-family: Roboto-Bold;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0.8);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
