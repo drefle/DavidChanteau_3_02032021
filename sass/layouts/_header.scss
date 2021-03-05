@@ -4,4 +4,26 @@ header{
         margin: 1rem;
         width: 40%;
     }
+
+    i{
+        position: absolute;
+        left: 1rem;
+        top:1.2rem;
+        color: #3a3a3a;
+    }
+}
+
+.menu__header{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: auto auto;
+    align-items: end;
+    h2{
+        font-family: Shrikhand-Regular;
+        font-weight: 100;
+    }
+
+    .heart-container{
+        margin-right: 1rem;
+    }
 }
