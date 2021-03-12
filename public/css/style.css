@@ -5,19 +5,20 @@ header {
 }
 header img {
   margin: 1rem;
-  width: 40%;
+  width: 14rem;
 }
 header i {
   position: absolute;
   left: 1rem;
-  top: 1.2rem;
+  top: 1.8rem;
   color: #3a3a3a;
 }
 
 .menu__header {
   display: grid;
   grid-template-rows: 1fr;
-  grid-template-columns: auto auto;
+  grid-template-columns: 1fr auto;
+  width: 100%;
   align-items: end;
 }
 .menu__header h2 {
@@ -35,7 +36,7 @@ footer {
 }
 footer img {
   filter: invert(1);
-  width: 25%;
+  width: 6.5rem;
   margin-bottom: 1rem;
 }
 footer ul {
@@ -68,7 +69,7 @@ footer ul li:nth-child(2) > p {
   align-items: center;
 }
 .localisation div {
-  width: 40%;
+  width: 14rem;
   display: grid;
   grid-template-columns: auto 1fr;
   padding: 0.8rem;
@@ -81,6 +82,13 @@ footer ul li:nth-child(2) > p {
   justify-self: center;
   font-family: Roboto-Bold;
   font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .localisation {
+    width: 80%;
+    margin: auto;
+    padding: 0 2rem;
+  }
 }
 
 .img__restaurant {
@@ -107,15 +115,35 @@ footer ul li:nth-child(2) > p {
   font-weight: 700;
   margin: 1rem 0 2rem 0;
 }
+@media (min-width: 768px) {
+  .goToRestaurants {
+    width: 80%;
+    margin: auto;
+    padding: 2rem 2rem;
+  }
+}
 
 .fonctionnement {
   padding: 3rem 1rem 2rem 1rem;
+}
+@media (min-width: 768px) {
+  .fonctionnement {
+    width: 80%;
+    margin: auto;
+    padding: 3rem 2rem;
+  }
 }
 .fonctionnement__list {
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 2rem;
   padding: 2rem 0 2rem 0;
+}
+@media (min-width: 768px) {
+  .fonctionnement__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+  }
 }
 .fonctionnement__list .list__step {
   box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.23);
@@ -125,7 +153,8 @@ footer ul li:nth-child(2) > p {
   background-color: #f3f3f3;
   padding: 1.5rem 2rem;
   margin-left: 10px;
-  align-items: flex-end;
+  align-items: center;
+  position: relative;
 }
 .fonctionnement__list .list__step i {
   color: #707070;
@@ -147,7 +176,7 @@ footer ul li:nth-child(2) > p {
   justify-content: center;
   align-items: center;
   color: white;
-  left: calc(1rem + 1px);
+  left: -10px;
 }
 
 .fonctionnement__list :nth-child(3n) i {
@@ -158,11 +187,25 @@ footer ul li:nth-child(2) > p {
   padding: 3rem 1rem 2rem 1rem;
   background-color: #f3f3f3;
 }
+@media (min-width: 768px) {
+  .restaurants {
+    width: 80%;
+    padding: 3rem 2rem 2rem 2rem;
+    border-radius: 15px;
+    margin: auto;
+  }
+}
 .restaurants__list {
   display: grid;
   grid-template-columns: 1fr;
   grid-row-gap: 2rem;
   margin: 2rem 0;
+}
+@media (min-width: 768px) {
+  .restaurants__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
 }
 .restaurants .list__card {
   height: 15rem;
@@ -235,33 +278,47 @@ footer ul li:nth-child(2) > p {
   position: relative;
   margin-top: -2rem;
   background-color: #f3f3f3;
+  display: flex;
+  flex-direction: column;
+  grid-row-gap: 2rem;
+  align-items: center;
+}
+.menu .btn {
+  justify-self: center;
+}
+.menu__list {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: 1fr;
   grid-row-gap: 2rem;
 }
-.menu .btn {
-  justify-self: center;
+@media (min-width: 1024px) {
+  .menu__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 2rem;
+  }
 }
-.menu__step {
+
+.list__step {
   display: grid;
   grid-row-gap: 1rem;
 }
-.menu__step h3 {
+.list__step h3 {
   font-size: 1rem;
   font-family: "Roboto-Thin";
   padding-bottom: 0.5rem;
   width: 40px;
   border-bottom: solid 3px #99E2D0;
 }
-.menu__step .step {
+.list__step .step {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   overflow: hidden;
+  opacity: 0;
 }
-.menu__step .step .card {
+.list__step .step .card {
   padding: 0.7rem 0 0.7rem 0.5rem;
   display: grid;
   grid-template-columns: auto 1fr;
@@ -271,7 +328,7 @@ footer ul li:nth-child(2) > p {
   position: relative;
   width: 100%;
 }
-.menu__step .step .card__nom {
+.list__step .step .card__nom {
   font-family: Roboto-Bold;
   font-size: 0.95rem;
   display: block;
@@ -280,7 +337,7 @@ footer ul li:nth-child(2) > p {
   white-space: nowrap;
   width: 100%;
 }
-.menu__step .step .card__descriptif {
+.list__step .step .card__descriptif {
   font-family: "Roboto-Thin";
   font-weight: 600;
   font-size: 0.8rem;
@@ -292,7 +349,7 @@ footer ul li:nth-child(2) > p {
   white-space: nowrap;
   width: 100%;
 }
-.menu__step .step .card__prix {
+.list__step .step .card__prix {
   grid-column-start: 2;
   font-family: "Roboto-Bold";
   grid-row-start: 2;
@@ -301,7 +358,7 @@ footer ul li:nth-child(2) > p {
   color: #3a3a3a;
   padding: 0 1.5rem;
 }
-.menu__step .step .check {
+.list__step .step .check {
   position: relative;
   color: white;
   height: 100%;
@@ -312,14 +369,44 @@ footer ul li:nth-child(2) > p {
   background-color: #99E2D0;
   align-items: center;
 }
-.menu__step .step:hover .check {
+.list__step .step:hover .check {
   animation: anim 1s;
   transition: animation 0.2s linear, opacity 0.2s linear;
   width: 25%;
 }
-.menu__step .step:hover .check i {
+.list__step .step:hover .check i {
   animation: tourne 1s;
   transition: animation 0.2s linear, opacity 0.2s linear;
+}
+.list__step .step:nth-child(1n) {
+  animation: apparition 0.5s forwards cubic-bezier(0.29, 0.26, 0.74, 1.26);
+}
+.list__step .step:nth-child(1) {
+  animation-delay: 0.5s;
+}
+.list__step .step:nth-child(2) {
+  animation-delay: 1s;
+}
+.list__step .step:nth-child(3) {
+  animation-delay: 1.5s;
+}
+.list__step .step:nth-child(4) {
+  animation-delay: 2s;
+}
+.list__step .step:nth-child(5) {
+  animation-delay: 2.5s;
+}
+.list__step .step:nth-child(6) {
+  animation-delay: 3s;
+}
+.list__step .step:nth-child(7) {
+  animation-delay: 3.5s;
+}
+.list__step .step:nth-child(8) {
+  animation-delay: 4s;
+}
+.list__step .step:nth-child(9) {
+  animation-delay: 4.5s;
 }
 
 @keyframes anim {
@@ -335,17 +422,32 @@ footer ul li:nth-child(2) > p {
     transform: rotate(360deg);
   }
 }
+@keyframes apparition {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .btn {
-  background: linear-gradient(172deg, #FF79DA 0%, #9356DC 100%, white 100%);
+  background: linear-gradient(172deg, #FF79DA 0%, #9356DC 100%);
   color: white;
-  padding: 0.8rem;
+  padding: 0.8rem 1.5rem;
   border-radius: 2rem;
   border: none;
   outline: none;
   font-family: Roboto-Regular;
   box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.23);
   margin-bottom: 1rem;
-  width: 45vw;
+  width: 195px;
+}
+.btn:hover {
+  opacity: 0.9;
+  filter: drop-shadow(2px 3px 4px black);
+  cursor: pointer;
 }
 
 .heart-container {
