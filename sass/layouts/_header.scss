@@ -2,13 +2,13 @@ header{
     @include centrer;
     img{
         margin: 1rem;
-        width: 40%;
+        width: 14rem;
     }
 
     i{
         position: absolute;
         left: 1rem;
-        top:1.2rem;
+        top:1.8rem;
         color: #3a3a3a;
     }
 }
@@ -16,7 +16,8 @@ header{
 .menu__header{
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr auto;
+    width:100%;
     align-items: end;
     h2{
         font-family: Shrikhand-Regular;
