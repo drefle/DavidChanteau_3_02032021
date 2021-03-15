@@ -85,6 +85,34 @@ footer ul li:nth-child(2) > p {
   font-family: Shrikhand-Regular;
   letter-spacing: 1rem;
   animation: 2s loader linear infinite;
+  display: block;
+}
+.loading .dot {
+  display: none;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin: 1rem;
+  animation: dot 2s ease-in-out infinite;
+}
+.loading .dot:nth-child(2) {
+  background-color: #9356DC;
+}
+.loading .dot:nth-child(3) {
+  background-color: #FF79DA;
+  animation-delay: 0.5s;
+}
+.loading .dot:nth-child(4) {
+  background-color: #99E2D0;
+  animation-delay: 1s;
+}
+@media (max-width: 768px) {
+  .loading h1 {
+    display: none;
+  }
+  .loading .dot {
+    display: block;
+  }
 }
 
 .localisation {
@@ -466,6 +494,17 @@ footer ul li:nth-child(2) > p {
   100% {
     z-index: -1;
     opacity: 0;
+  }
+}
+@keyframes dot {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 .btn {
