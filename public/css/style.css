@@ -198,7 +198,7 @@ footer ul li:nth-child(2) > p {
     grid-column-gap: 2rem;
   }
 }
-.fonctionnement__list .list__step {
+.fonctionnement__list .list__procedure {
   box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.23);
   display: grid;
   grid-template-columns: 20px 1fr;
@@ -209,15 +209,15 @@ footer ul li:nth-child(2) > p {
   align-items: center;
   position: relative;
 }
-.fonctionnement__list .list__step i {
+.fonctionnement__list .list__procedure i {
   color: #707070;
 }
-.fonctionnement__list .list__step__text {
+.fonctionnement__list .list__procedure__text {
   margin-left: 1rem;
   font-family: Roboto-Bold;
   font-size: 0.9rem;
 }
-.fonctionnement__list .list__step__number {
+.fonctionnement__list .list__procedure__number {
   font-size: 0.7rem;
   font-family: Roboto-Regular;
   position: absolute;
@@ -353,7 +353,8 @@ footer ul li:nth-child(2) > p {
 }
 
 .list__step {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   grid-row-gap: 1rem;
 }
 .list__step h3 {
