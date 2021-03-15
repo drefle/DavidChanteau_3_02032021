@@ -269,7 +269,8 @@
 }
 
 .list__step{
-        display: grid;
+        display: flex;
+        flex-direction: column;
         grid-row-gap: 1rem;
         h3{
             font-size: 1rem;
