@@ -413,14 +413,14 @@ footer ul li:nth-child(2) > p {
   padding: 0 1.5rem;
 }
 .list__step .step .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   color: white;
-  display: flex;
   font-size: 1.3rem;
-  justify-content: center;
   width: 0%;
   background-color: #99E2D0;
-  align-items: center;
 }
 .list__step .step:hover .check {
   animation: anim 1s;
@@ -526,45 +526,37 @@ footer ul li:nth-child(2) > p {
 }
 
 .heart-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   justify-self: end;
   align-self: center;
   width: 40px;
   height: 40px;
   position: relative;
+  background: linear-gradient(to left, #9356dc 0%, #ff79da 50%, #99e2d0 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.heart-container i {
+  font-size: 1.5rem;
+  background-color: white;
+  -webkit-text-stroke: 2px black;
+}
+.heart-container i:hover {
+  animation: heart 0.5s ease-in-out forwards;
 }
 
-.heart-clip {
-  display: block;
-  width: 100%;
-  height: 100%;
-  clip-path: path("M20,35.09,4.55,19.64a8.5,8.5,0,0,1-.13-12l.13-.13a8.72,8.72,0,0,1,12.14,0L20,10.79l3.3-3.3a8.09,8.09,0,0,1,5.83-2.58,8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.13,12l-.13.13Z");
-  transform: scale(0.75);
+@keyframes heart {
+  0% {
+    background-color: white;
+  }
+  100% {
+    background-color: transparent;
+  }
 }
-.heart-clip:hover {
-  animation: pulse 0.6s forwards;
-}
-.heart-clip:hover::before {
-  transform: scale(1);
-  opacity: 1;
-}
-.heart-clip::before {
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: linear-gradient(5deg, #FF79DA 19%, #9356DC 87%);
-  transform: scale(0);
-  transition: transform 0.2s linear, opacity 0.2s linear;
-}
-
-.heart {
-  transform: scale(0.75);
-  position: absolute;
-  background-color: black;
-  clip-path: path("M20,35.07,4.55,19.62a8.5,8.5,0,0,1-.12-12l.12-.12a8.72,8.72,0,0,1,12.14,0L20,10.77l3.3-3.3A8.09,8.09,0,0,1,29.13,4.9a8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.12,12l-.12.12ZM10.64,7.13A6.44,6.44,0,0,0,6.07,18.19L20,32.06,33.94,18.12A6.44,6.44,0,0,0,34,9l0,0a6.44,6.44,0,0,0-4.77-1.85A6,6,0,0,0,24.83,9L20,13.78,15.21,9A6.44,6.44,0,0,0,10.64,7.13Z");
-}
-
 @font-face {
   font-family: "Roboto-Regular";
   src: url("Roboto-Regular.ttf");

@@ -336,14 +336,12 @@
             }
 
             .check{
+                @include centrer;
                 position: relative;
                 color: white;
-                display: flex;
                 font-size: 1.3rem;
-                justify-content: center;
                 width: 0%;
                 background-color: #99E2D0;
-                align-items: center;
             }
 
             &:hover{
