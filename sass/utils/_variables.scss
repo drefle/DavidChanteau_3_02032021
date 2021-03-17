@@ -8,9 +8,9 @@ $color-lightgrey:rgb(243, 243, 243);
 
 $gradient-btn:linear-gradient(172deg, $color-secondary 0%, $color-primary 100%);
 $gradient-heart:linear-gradient(184deg, $color-primary 0%,$color-secondary 100%);
+$gradient-loading:linear-gradient(to left, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 100%);
 
-$font-family:(text:Roboto-Thin, gras:Roboto-Bold, liens:Roboto-Regular);
-$font-size:(footerstep:.9rem, nombrenouveau:.7rem, localisation:.8rem);
+$list-font:(text:Roboto-Thin, gras:Roboto-Bold, liens:Roboto-Regular, loader:Shrikhand-Regular);
+$list-taille-font:(footerstep:.9rem, nombrenouveau:.7rem, localisation:.8rem, loader:3rem);
 
-$desktop-width:1024px;
 $tablet-width:768px;

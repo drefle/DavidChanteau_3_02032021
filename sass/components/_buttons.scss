@@ -1,38 +1,37 @@
 .btn{
+    /*margin, padding*/
+    @include marg-pad(0 0 1rem 0,.8rem 1.5rem);
     background: $gradient-btn;
-    color: white;
-    padding: .8rem 1.5rem;
-    border-radius: 2rem;
     border: none;
-    outline: none;
-    font-family:map-get($font-family,liens );
+    border-radius: 2rem;
     box-shadow: 0px 5px 10px -1px rgb(0 0 0 / 23%);
-    margin-bottom: 1rem;
+    color: white;
+    font-family:map-get($list-font,liens );
+    outline: none;
     width:195px;
 
     &:hover{
-        opacity: 0.9;
-        filter: drop-shadow(2px 3px 4px black);
         cursor:pointer;
+        filter: drop-shadow(2px 3px 4px black);
+        opacity: 0.9;
     }
 }
 
 .heart-container{
-    @include centrer;
-    justify-self: end;
+    /*justify-content, align-items*/
+    @include alignement(center,center);
     align-self: center;
-    width: 40px;
-    height: 40px;
-    position: relative; 
     background: $gradient-heart;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
     background-clip: text;
-   -webkit-text-fill-color:transparent;
+    height: 40px;
+    justify-self: end;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color:transparent;
+    width: 40px;
 
     i{
-        font-size: 1.5rem;
         background-color: white;
+        font-size: 1.5rem;
         -webkit-text-stroke: 1px black;
     }
 

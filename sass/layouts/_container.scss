@@ -1,46 +1,45 @@
 .loading{
-    display: flex;
-    position: fixed;
+    @extend %centrer;
+    animation-delay: 3s;
+    animation-duration: 0s;
+    animation-fill-mode: forwards;
+    animation-name: waiter;
+    background-color: rgb(53, 53, 53 , 80%);
     height: 100%;
+    position: fixed;
     width:100%;
     z-index: 10;
-    background-color: rgb(53, 53, 53 , 80%);
-    justify-content: center;
-    align-items: center;
-    animation-delay: 3s;
-    animation-name: waiter;
-    animation-fill-mode: forwards;
-    animation-duration: 0s;
 
     h1{
-        background: linear-gradient(to left, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 50%, rgba(153,226,208,1) 100%);
+        /*family,size,weight*/
+        @include font-details(map-get($list-font, loader),map-get($list-taille-font, loader ),unset);
+        animation:2s loader linear infinite;
+        background: $gradient-loading;
+        background-clip: text;
         background-size: 200%;
+        display: block;
+        letter-spacing: 1rem;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 3rem;
-        font-family: Shrikhand-Regular;
-        letter-spacing: 1rem;
-        animation:2s loader linear infinite;
-        display: block;
     }
     .dot{
-        display: none;
-        width:1.5rem;
-        height: 1.5rem;
-        border-radius: 50%;
-        margin: 1rem;
         animation: dot 2s ease-in-out infinite;
+        border-radius: 50%;
+        display: none;
+        height: 1.5rem;
+        margin: 1rem;
+        width:1.5rem;
     }
     .dot:nth-child(2){
         background-color: $color-primary;
     }
     .dot:nth-child(3){
-        background-color: $color-secondary;
         animation-delay: 0.5s;
+        background-color: $color-secondary;
     }
     .dot:nth-child(4){
-        background-color: $color-tertiary;
         animation-delay: 1s;
+        background-color: $color-tertiary;
     }
 
     @media(max-width:#{$tablet-width}){
@@ -55,57 +54,56 @@
 }
 
 .localisation{
+    @extend %centrer;
     background-color: #E0E0E0;
-    @include centrer;
     div{
-        width: 14rem;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        padding: .8rem;
+        /*template-rows,templates column, row gap, column gap*/
+        @include grid(auto,auto 1fr,0,0);
         color: #535353;
+        padding: .8rem;
+        width: 14rem;
         i{
             justify-self: start;
         }
         p{
+            /*family,size,weight*/
+            @include font-details(map-get($list-font, gras ),map-get($list-taille-font, localisation),unset);
             justify-self: center;
-            font-family:map-get($font-family, gras );
-            font-size: map-get($font-size, localisation);
         }
 
     }
-    @media(min-width:#{$tablet-width}){
+    @include tablet-only{
+        /*margin, padding*/
+        @include marg-pad(auto,0 2rem);
         width: 80%;
-        margin: auto;
-        padding: 0 2rem;
     }
 }
 
 .img__restaurant{
-    width:100%;
     height:15rem;
+    width:100%;
     picture{
         height: 70%;
         img{
-            height: 100%;
-            object-fit: cover;
-            width:100%;        }
+            @extend %img-cover;     
+        }
     }
 }
 
 .goToRestaurants{
-    background-color: $color-lightgrey;
-    text-align: center;
-    padding: 2rem 3rem;
     align-items: center;
+    background-color: $color-lightgrey;
+    padding: 2rem 3rem;
+    text-align: center;
     &__text{
-        font-family: map-get($font-family,text);
-        font-weight: 700;
+        /*family,size,weight*/
+        @include font-details(map-get($list-font,text),unset,700);
         margin: 1rem 0 2rem 0;
     }
-    @media(min-width:#{$tablet-width}){
+    @include tablet-only{
+        /*margin, padding*/
+        @include marg-pad(auto,2rem);
         width: 80%;
-        margin: auto;
-        padding: 2rem 2rem;
     }
 
 }
@@ -113,51 +111,50 @@
 .fonctionnement{
     padding: 3rem 1rem 2rem 1rem;
 
-    @media(min-width:#{$tablet-width}){
+    @include tablet-only{
+        /*margin, padding*/
+        @include marg-pad(auto,3rem 2rem);
         width: 80%;
-        margin: auto;
-        padding: 3rem 2rem;
     }
     &__list{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 2rem;
+            
+        /*template-rows,templates column, row gap, column gap*/
+        @include grid(auto,1fr,2rem,0);
         padding: 2rem 0 2rem 0;
 
-        @media(min-width:#{$tablet-width}){
-            grid-template-columns: repeat(3,1fr);
-            grid-column-gap: 2rem;
+        @include tablet-only{
+            @include grid(auto,repeat(3,1fr),0,2rem);
         }
 
         .list__procedure{
-            box-shadow: 0px 5px 10px -1px rgb(0 0 0 / 23%);
-            display: grid;
-            grid-template-columns: 20px 1fr;
-            border-radius:15px ;
-            background-color: $color-lightgrey;
-            padding: 1.5rem 2rem;
-            margin-left:10px;
+            /*template-rows,templates column, row gap, column gap*/
+            @include grid(0,20px 1fr,0,0);
+            /*margin, padding*/
+            @include marg-pad(0 0 0 10px,1.5rem 2rem);
             align-items: center;
+            background-color: $color-lightgrey;
+            border-radius:15px ;
+            box-shadow: 0px 5px 10px -1px rgb(0 0 0 / 23%);
             position:relative;
             i{
                 color: rgb(112, 112, 112);
             }
             &__text{
+                /*family,size,weight*/
+                @include font-details(map-get($list-font,gras),map-get($list-taille-font, footerstep),unset);
                 margin-left:1rem;
-                font-family: map-get($font-family, gras);
-                font-size: map-get($font-size, footerstep);
             }
             &__number{
-                font-size: map-get($font-size, nombrenouveau);
-                font-family: map-get($font-family, liens);
-                position: absolute;
+                @extend %centrer;
+                /*family,size,weight*/
+                @include font-details(map-get($list-font,liens),map-get($list-taille-font, nombrenouveau),unset);
                 background: $color-primary;
-                height: 20px;
-                width: 20px;
                 border-radius: 50%;
-                @include centrer;
                 color: white;
+                height: 20px;
                 left: -10px;
+                position: absolute;
+                width: 20px;
             }
         }
     }
@@ -171,58 +168,54 @@
 }
 
 .restaurants{
-    padding: 3rem 1rem 2rem 1rem;
     background-color: $color-lightgrey;
+    padding: 3rem 1rem;
 
-    @media(min-width:#{$tablet-width}){
-        width:80%;
-        padding: 3rem 2rem 2rem 2rem;
+    @include tablet-only{
+        /*margin, padding*/
+        @include marg-pad(auto,3rem);
         border-radius: 15px;
-        margin: auto;
+        width:80%;
     }
 
     &__list{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-row-gap: 2rem;
-        margin: 2rem 0;
+        /*template-rows,templates column, row gap, column gap*/
+        @include grid(auto,1fr,2rem,0);
+        margin-top: 2rem;
 
-        @media(min-width:#{$tablet-width}){
-            grid-template-columns: repeat(2,1fr);
-            grid-column-gap: 2rem;
+        @include tablet-only{
+            @include grid(auto,repeat(2,1fr),2rem,2rem);
         }
     }
 
     .list__card{
-        height: 15rem;
+        background-color: white;
         border-radius: 15px;
-        overflow: hidden;
+        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.10);
         display: flex;
         flex-direction: column;
-        background-color: white;
-        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.10);
+        height: 15rem;
+        overflow: hidden;
         position: relative;
         picture{
             height: 70%;
             img{
-                height: 100%;
-                object-fit: cover;
-                width:100%;        }
+                @extend %img-cover;  
+            }
         }
         .card__footer{
+            /*template-rows,templates column, row gap, column gap*/
+            @include grid(auto,auto 1fr,0,0);
             padding: 1rem 1rem 1rem 0.5rem;
-            display: grid;
-            grid-template-columns: auto 1fr;
-
             .footer__descriptif{
-                font-size: map-get($font-size, footerstep);
                 h3{
-                    font-family: map-get($font-family, gras );
+                    /*family,size,weight*/
+                    @include font-details(map-get($list-font,gras),map-get($list-taille-font, footerstep),unset);
                 }
                 p{
+                    /*family,size,weight*/
+                    @include font-details(map-get($list-font,text),map-get($list-taille-font, footerstep),700);
                     margin-top: 0.3rem;
-                    font-family: map-get($font-family, text);
-                    font-weight: 700;
                 }
             }
             
@@ -240,30 +233,34 @@
 }
 
 .menu{
-    padding: 1.5rem 1rem 4rem 1rem;
-    border-radius: 2rem 2rem 0 0;
-    position: relative;
-    margin-top: -2rem;
+    @extend %centrer;
+    /*margin, padding*/
+    @include marg-pad(-2rem 0 0 0,1.5rem 1rem 4rem 1rem);
     background-color: $color-lightgrey;
-    display:flex;
+    border-radius: 2rem 2rem 0 0;
     flex-direction: column;
     grid-row-gap: 2rem;
-    align-items: center;
+    position: relative;
+
+    @include tablet-only{
+        /*margin, padding*/
+        @include marg-pad(-2rem 0 0 0,1.5rem calc(10% - 2rem) 4rem calc(10% - 2rem));
+    }
 
     .btn{
         justify-self: center;
     }
 
     &__list{
-        display: grid;
-        grid-template-rows: auto ;
-        grid-template-columns: 1fr;
-        grid-row-gap: 2rem;
-
-        @media(min-width:#{$desktop-width}){
-            grid-template-columns: repeat(3,1fr);
+        /*template-rows,templates column, row gap, column gap*/
+        @include grid(auto,1fr,2rem,0);
+        @include tablet-only{
+            /*justify-content, align-items*/
+            @include alignement(center,baseline);
+            flex-wrap: wrap;
             grid-column-gap: 2rem;
         }
+
     }
 
 }
@@ -273,12 +270,12 @@
         flex-direction: column;
         grid-row-gap: 1rem;
         h3{
-            font-size: 1rem;
-            font-family: 'Roboto-Thin';
+            /*family,size,weight*/
+            @include font-details(map-get($list-font,text),1rem,700);
+            border-bottom: solid 3px $color-tertiary;
+            letter-spacing: 1px;
             padding-bottom: 0.5rem;
             width: 40px;
-            border-bottom: solid 3px $color-tertiary;
-            
         }
 
         
@@ -287,47 +284,34 @@
             border-radius: 15px;
             box-shadow: 0px 0px 10px 2px rgb(0 0 0 / 10%);
             display: flex;
-            overflow: hidden;
             opacity: 0;
-
+            overflow: hidden;
             .card{
+                /*template-rows,templates column, row gap, column gap*/
+                @include grid(auto auto,auto 1fr,0.3rem,0);
                 padding: 0.7rem 0 0.7rem 0.5rem;
-                display: grid;
-                grid-template-columns: auto 1fr;
-                grid-template-rows: auto auto;
-                grid-row-gap: 0.3rem;
-                text-overflow: ellipsis;
                 position: relative;
+                text-overflow: ellipsis;
                 width:100%;
                 &__nom{
-                    font-family: Roboto-Bold;
-                    font-size:0.95rem;
-                    display: block;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    width: 100%;
+                    @extend %text-wrap;
+                    /*family,size,weight*/
+                    @include font-details(map-get($list-font,gras),0.95rem,unset);
                 }
                 &__descriptif{
-                    font-family: 'Roboto-Thin';
-                    font-weight: 600;
-                    font-size: 0.8rem;
+                    @extend %text-wrap;
+                    /*family,size,weight*/
+                    @include font-details(map-get($list-font,text),.8rem,600);
                     grid-column-start: 1;
                     grid-row-start: 2;
-                    display: block;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                    width: 100%;
-
                 }
                 &__prix{
+                    /*family,size,weight*/
+                    @include font-details(map-get($list-font,gras),.85rem,unset);
+                    color: #3a3a3a;
                     grid-column-start: 2;
-                    font-family: 'Roboto-Bold';
                     grid-row-start: 2;
                     justify-self: end;
-                    font-size: 0.85rem;
-                    color: #3a3a3a;
                     padding: 0 1.5rem;
                 }
     
@@ -336,12 +320,13 @@
             }
 
             .check{
-                @include centrer;
-                position: relative;
+                @extend %centrer;
+                background-color: #99E2D0;
                 color: white;
                 font-size: 1.3rem;
+                position: relative;
                 width: 0%;
-                background-color: #99E2D0;
+
             }
 
             &:hover{
@@ -392,12 +377,13 @@
 
 @keyframes apparition{
     0%{
-        transform: translateY(-50px);
         opacity: 0;
+        transform: translateY(-50px);
+
     }
     100%{
-        transform: translateY(0);
         opacity: 1;
+        transform: translateY(0);
     }
 
 }
@@ -416,8 +402,9 @@
     0%{
     }
     100%{
-        z-index: -1;
         opacity: 0;
+        z-index: -1;
+
     }
 }
 

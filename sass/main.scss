@@ -1,5 +1,6 @@
 @import "./utils/variables";
 @import "./utils/mixins";
+@import "./utils/extensions";
 @import "./layouts/header";
 @import "./layouts/footer";
 @import "./layouts/container";
@@ -19,7 +20,7 @@ a{
 }
 
 h2{
-    font-family: map-get($font-family, gras );
+    font-family: map-get($list-font, gras );
 }
 
 

@@ -1,19 +1,45 @@
-@mixin centrer {
+@mixin alignement($justify,$align) {
+    align-items: $align;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: $justify;
+
 }
 
 @mixin nouveau{
     content:"Nouveau";
-    @include centrer;
-    font-family: map-get($font-family, gras);
-    font-size: map-get($font-size, nombrenouveau);
-    padding:.3rem .7rem;
+    @include alignement(center,center);
     background-color: $color-bgnouveau;
-    color:$color-textnouveau;
-    position: absolute;
-    top:.7rem;
-    right:.7rem;
     border-radius: 2px;
+    color:$color-textnouveau;
+    font-family: map-get($list-font, gras);
+    font-size: map-get($list-taille-font, nombrenouveau);
+    padding:.3rem .7rem;
+    position: absolute;
+    right:.7rem;
+    top:.7rem;
+}
+
+@mixin grid($temp-rows,$temp-col,$row-gap,$col-gap) {
+    display: grid;
+    grid-template-columns: $temp-col;
+    grid-template-rows: $temp-rows;
+    grid-column-gap:$col-gap;
+    grid-row-gap: $row-gap;
+}
+
+@mixin marg-pad($margin-value, $padding-value){
+    margin:$margin-value;
+    padding: $padding-value;
+}
+
+@mixin font-details($family,$size,$weight){
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin tablet-only{
+    @media(min-width:#{$tablet-width}) {
+        @content;
+    }
 }

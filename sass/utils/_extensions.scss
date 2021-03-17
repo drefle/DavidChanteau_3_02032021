@@ -1,0 +1,19 @@
+%text-wrap{
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+%img-cover{
+    height: 100%;
+    object-fit: cover;
+    width:100%;      
+}
+
+%centrer{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
