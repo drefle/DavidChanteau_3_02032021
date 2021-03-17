@@ -26,5 +26,8 @@ header{
 
     .heart-container{
         margin-right: 1rem;
+        i{
+            background-color: $color-lightgrey;
+        }
     }
 }

@@ -28,6 +28,9 @@ header i {
 .menu__header .heart-container {
   margin-right: 1rem;
 }
+.menu__header .heart-container i {
+  background-color: #f3f3f3;
+}
 
 footer {
   background-color: #3a3a3a;
@@ -551,7 +554,6 @@ footer ul li:nth-child(2) > p {
 
 @keyframes heart {
   0% {
-    background-color: white;
     -webkit-text-stroke: 1px black;
   }
   100% {
