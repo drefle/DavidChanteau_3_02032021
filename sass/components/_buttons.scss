@@ -18,11 +18,9 @@
 }
 
 .heart-container{
-    /*justify-content, align-items*/
-    @include alignement(center,center);
+    @extend %centrer;
     align-self: center;
     background: $gradient-heart;
-    background-clip: text;
     height: 40px;
     justify-self: end;
     -webkit-background-clip: text;

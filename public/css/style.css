@@ -12,7 +12,7 @@
   width: 100%;
 }
 
-.list__step .step .check, .menu, .fonctionnement__list .list__procedure__number, .localisation, .loading, header {
+.heart-container, .list__step .step .check, .menu, .fonctionnement__list .list__procedure__number, .localisation, .loading, header {
   align-items: center;
   display: flex;
   justify-content: center;
@@ -112,7 +112,6 @@ footer ul li:nth-child(2) > p {
   font-weight: unset;
   animation: 2s loader linear infinite;
   background: linear-gradient(to left, #9356dc 0%, #ff79da 50%, #99e2d0 100%);
-  background-clip: text;
   background-size: 200%;
   display: block;
   letter-spacing: 1rem;
@@ -590,13 +589,8 @@ footer ul li:nth-child(2) > p {
 }
 
 .heart-container {
-  /*justify-content, align-items*/
-  align-items: center;
-  display: flex;
-  justify-content: center;
   align-self: center;
   background: linear-gradient(184deg, #9356DC 0%, #FF79DA 100%);
-  background-clip: text;
   height: 40px;
   justify-self: end;
   -webkit-background-clip: text;

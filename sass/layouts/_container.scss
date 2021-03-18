@@ -15,7 +15,6 @@
         @include font-details(map-get($list-font, loader),map-get($list-taille-font, loader ),unset);
         animation:2s loader linear infinite;
         background: $gradient-loading;
-        background-clip: text;
         background-size: 200%;
         display: block;
         letter-spacing: 1rem;
