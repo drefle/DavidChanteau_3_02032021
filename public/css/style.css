@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.restaurants .list__card picture img, .img__restaurant picture img {
+.restaurants__list .list__card picture img, .img__restaurant picture img {
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -312,7 +312,7 @@ footer ul li:nth-child(2) > p {
     grid-row-gap: 2rem;
   }
 }
-.restaurants .list__card {
+.restaurants__list .list__card {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
@@ -322,10 +322,10 @@ footer ul li:nth-child(2) > p {
   overflow: hidden;
   position: relative;
 }
-.restaurants .list__card picture {
+.restaurants__list .list__card picture {
   height: 70%;
 }
-.restaurants .list__card .card__footer {
+.restaurants__list .list__card .card__footer {
   /*template-rows,templates column, row gap, column gap*/
   display: grid;
   grid-template-columns: auto 1fr;
@@ -334,20 +334,20 @@ footer ul li:nth-child(2) > p {
   grid-row-gap: 0;
   padding: 1rem 1rem 1rem 0.5rem;
 }
-.restaurants .list__card .card__footer .footer__descriptif h3 {
+.restaurants__list .list__card .card__footer .footer__descriptif h3 {
   /*family,size,weight*/
   font-family: Roboto-Bold;
   font-size: 0.9rem;
   font-weight: unset;
 }
-.restaurants .list__card .card__footer .footer__descriptif p {
+.restaurants__list .list__card .card__footer .footer__descriptif p {
   /*family,size,weight*/
   font-family: Roboto-Thin;
   font-size: 0.9rem;
   font-weight: 700;
   margin-top: 0.3rem;
 }
-.restaurants .list__card:nth-child(1)::after {
+.restaurants__list article:nth-child(1) .list__card::after {
   content: "Nouveau";
   align-items: center;
   display: flex;
@@ -362,7 +362,7 @@ footer ul li:nth-child(2) > p {
   right: 0.7rem;
   top: 0.7rem;
 }
-.restaurants .list__card:nth-child(2)::after {
+.restaurants__list article:nth-child(2) .list__card::after {
   content: "Nouveau";
   align-items: center;
   display: flex;
@@ -600,6 +600,7 @@ footer ul li:nth-child(2) > p {
 .heart-container i {
   background-color: white;
   font-size: 1.5rem;
+  -webkit-background-clip: text;
   -webkit-text-stroke: 1px black;
 }
 .heart-container i:hover {

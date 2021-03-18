@@ -185,49 +185,51 @@
         @include tablet-only{
             @include grid(auto,repeat(2,1fr),2rem,2rem);
         }
-    }
 
-    .list__card{
-        background-color: white;
-        border-radius: 15px;
-        box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.10);
-        display: flex;
-        flex-direction: column;
-        height: 15rem;
-        overflow: hidden;
-        position: relative;
-        picture{
-            height: 70%;
-            img{
-                @extend %img-cover;  
-            }
-        }
-        .card__footer{
-            /*template-rows,templates column, row gap, column gap*/
-            @include grid(auto,auto 1fr,0,0);
-            padding: 1rem 1rem 1rem 0.5rem;
-            .footer__descriptif{
-                h3{
-                    /*family,size,weight*/
-                    @include font-details(map-get($list-font,gras),map-get($list-taille-font, footerstep),unset);
-                }
-                p{
-                    /*family,size,weight*/
-                    @include font-details(map-get($list-font,text),map-get($list-taille-font, footerstep),700);
-                    margin-top: 0.3rem;
+        .list__card{
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.10);
+            display: flex;
+            flex-direction: column;
+            height: 15rem;
+            overflow: hidden;
+            position: relative;
+            picture{
+                height: 70%;
+                img{
+                    @extend %img-cover;  
                 }
             }
-            
-
+            .card__footer{
+                /*template-rows,templates column, row gap, column gap*/
+                @include grid(auto,auto 1fr,0,0);
+                padding: 1rem 1rem 1rem 0.5rem;
+                .footer__descriptif{
+                    h3{
+                        /*family,size,weight*/
+                        @include font-details(map-get($list-font,gras),map-get($list-taille-font, footerstep),unset);
+                    }
+                    p{
+                        /*family,size,weight*/
+                        @include font-details(map-get($list-font,text),map-get($list-taille-font, footerstep),700);
+                        margin-top: 0.3rem;
+                    }
+                }
+                
+    
+            }
+        }
+    
+        article:nth-child(1) .list__card::after{
+            @include nouveau;
+        }
+        article:nth-child(2) .list__card::after{
+            @include nouveau;
         }
     }
 
-    .list__card:nth-child(1)::after{
-        @include nouveau;
-    }
-    .list__card:nth-child(2)::after{
-        @include nouveau;
-    }
+    
 
 }
 
