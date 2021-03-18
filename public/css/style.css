@@ -174,7 +174,7 @@ footer ul li:nth-child(2) > p {
   .localisation {
     /*margin, padding*/
     margin: auto;
-    padding: 0 2rem;
+    padding: 0 3rem;
     width: 80%;
   }
 }
@@ -203,7 +203,7 @@ footer ul li:nth-child(2) > p {
   .goToRestaurants {
     /*margin, padding*/
     margin: auto;
-    padding: 2rem;
+    padding: 2rem 3rem;
     width: 80%;
   }
 }

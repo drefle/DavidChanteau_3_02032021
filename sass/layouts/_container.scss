@@ -73,7 +73,7 @@
     }
     @include tablet-only{
         /*margin, padding*/
-        @include marg-pad(auto,0 2rem);
+        @include marg-pad(auto,0 3rem);
         width: 80%;
     }
 }
@@ -101,7 +101,7 @@
     }
     @include tablet-only{
         /*margin, padding*/
-        @include marg-pad(auto,2rem);
+        @include marg-pad(auto,2rem 3rem);
         width: 80%;
     }
 
