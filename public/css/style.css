@@ -6,7 +6,7 @@
   width: 100%;
 }
 
-.restaurants__list .list__card picture img, .img__restaurant picture img {
+.restaurants__list article .list__card picture img, .img__restaurant picture img {
   height: 100%;
   object-fit: cover;
   width: 100%;
@@ -148,6 +148,7 @@ footer ul li:nth-child(2) > p {
 
 .localisation {
   background-color: #E0E0E0;
+  box-shadow: inset 0px 28px 4px -24px rgba(0, 0, 0, 0.24);
 }
 .localisation div {
   /*template-rows,templates column, row gap, column gap*/
@@ -234,8 +235,11 @@ footer ul li:nth-child(2) > p {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 2rem;
-    grid-row-gap: 0;
+    grid-row-gap: 2rem;
   }
+}
+.fonctionnement__list h2 {
+  grid-row-start: 1;
 }
 .fonctionnement__list .list__procedure {
   /*template-rows,templates column, row gap, column gap*/
@@ -252,6 +256,11 @@ footer ul li:nth-child(2) > p {
   border-radius: 15px;
   box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.23);
   position: relative;
+}
+@media (min-width: 768px) {
+  .fonctionnement__list .list__procedure {
+    grid-row-start: 2;
+  }
 }
 .fonctionnement__list .list__procedure i {
   color: #707070;
@@ -276,8 +285,10 @@ footer ul li:nth-child(2) > p {
   position: absolute;
   width: 20px;
 }
-
-.fonctionnement__list :nth-child(3n) i {
+.fonctionnement__list .list__procedure:nth-child(4) {
+  background-color: #f5edff;
+}
+.fonctionnement__list .list__procedure:nth-child(4) i {
   color: #9356DC;
 }
 
@@ -312,7 +323,7 @@ footer ul li:nth-child(2) > p {
     grid-row-gap: 2rem;
   }
 }
-.restaurants__list .list__card {
+.restaurants__list article .list__card {
   background-color: white;
   border-radius: 15px;
   box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
@@ -322,10 +333,10 @@ footer ul li:nth-child(2) > p {
   overflow: hidden;
   position: relative;
 }
-.restaurants__list .list__card picture {
+.restaurants__list article .list__card picture {
   height: 70%;
 }
-.restaurants__list .list__card .card__footer {
+.restaurants__list article .list__card .card__footer {
   /*template-rows,templates column, row gap, column gap*/
   display: grid;
   grid-template-columns: auto 1fr;
@@ -334,13 +345,13 @@ footer ul li:nth-child(2) > p {
   grid-row-gap: 0;
   padding: 1rem 1rem 1rem 0.5rem;
 }
-.restaurants__list .list__card .card__footer .footer__descriptif h3 {
+.restaurants__list article .list__card .card__footer .footer__descriptif h3 {
   /*family,size,weight*/
   font-family: Roboto-Bold;
   font-size: 0.9rem;
   font-weight: unset;
 }
-.restaurants__list .list__card .card__footer .footer__descriptif p {
+.restaurants__list article .list__card .card__footer .footer__descriptif p {
   /*family,size,weight*/
   font-family: Roboto-Thin;
   font-size: 0.9rem;
@@ -645,15 +656,6 @@ a {
 
 h2 {
   font-family: Roboto-Bold;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(0.8);
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

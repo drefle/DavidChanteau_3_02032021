@@ -5,7 +5,7 @@
 
 }
 
-@mixin nouveau{
+@mixin icon--new{
     content:"Nouveau";
     @include alignement(center,center);
     background-color: $color-bgnouveau;
