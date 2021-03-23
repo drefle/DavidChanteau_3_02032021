@@ -235,11 +235,8 @@ footer ul li:nth-child(2) > p {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto;
     grid-column-gap: 2rem;
-    grid-row-gap: 2rem;
+    grid-row-gap: 0;
   }
-}
-.fonctionnement__list h2 {
-  grid-row-start: 1;
 }
 .fonctionnement__list .list__procedure {
   /*template-rows,templates column, row gap, column gap*/
@@ -256,11 +253,6 @@ footer ul li:nth-child(2) > p {
   border-radius: 15px;
   box-shadow: 0px 5px 10px -1px rgba(0, 0, 0, 0.23);
   position: relative;
-}
-@media (min-width: 768px) {
-  .fonctionnement__list .list__procedure {
-    grid-row-start: 2;
-  }
 }
 .fonctionnement__list .list__procedure i {
   color: #707070;
