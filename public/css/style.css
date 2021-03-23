@@ -69,29 +69,44 @@ footer img {
 }
 footer ul {
   /*template-rows,templates column, row gap, column gap*/
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-  grid-column-gap: 0;
-  grid-row-gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
   font-size: 0.9rem;
+  grid-row-gap: 0.4rem;
 }
 footer ul li {
-  display: inline-flex;
+  overflow: hidden;
+  width: fit-content;
 }
-footer ul li p {
+footer ul li a {
+  display: inline-flex;
+  position: relative;
+}
+footer ul li a p {
   font-family: Roboto-Thin;
 }
-footer ul li i {
+footer ul li a i {
   font-size: 0.8rem;
   margin-right: 0.3rem;
   width: 20px;
 }
-footer ul li:nth-child(1) > p {
+footer ul li a::after {
+  content: "";
+  background-color: white;
+  bottom: 0;
+  height: 1px;
+  position: absolute;
+  transform-origin: 100% 0;
+  transform: scaleX(0);
+  transition: transform 0.8s ease-out;
+  width: 100%;
+}
+footer ul li a p:nth-child(2) {
   font-family: Roboto-Regular;
 }
-footer ul li:nth-child(2) > p {
-  font-family: Roboto-Regular;
+footer ul li:hover > a::after {
+  transform: scaleX(1);
+  transform-origin: 0 0;
 }
 
 .loading {
