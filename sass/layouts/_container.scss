@@ -130,7 +130,7 @@
             /*template-rows,templates column, row gap, column gap*/
             @include grid(0,20px 1fr,0,0);
             /*margin, padding*/
-            @include marg-pad(0 0 0 10px,1.5rem 2rem);
+            @include marg-pad(0 0 0 10px,2rem 2rem);
             align-items: center;
             background-color: $color-lightgrey;
             border-radius:15px ;

@@ -20,7 +20,7 @@
 
 header img {
   margin: 1rem;
-  width: 14rem;
+  width: 10rem;
 }
 header i {
   color: #3a3a3a;
@@ -159,7 +159,7 @@ footer ul li:nth-child(2) > p {
   grid-row-gap: 0;
   color: #535353;
   padding: 0.8rem;
-  width: 14rem;
+  width: 10rem;
 }
 .localisation div i {
   justify-self: start;
@@ -247,7 +247,7 @@ footer ul li:nth-child(2) > p {
   grid-row-gap: 0;
   /*margin, padding*/
   margin: 0 0 0 10px;
-  padding: 1.5rem 2rem;
+  padding: 2rem 2rem;
   align-items: center;
   background-color: #f3f3f3;
   border-radius: 15px;
@@ -277,10 +277,10 @@ footer ul li:nth-child(2) > p {
   position: absolute;
   width: 20px;
 }
-.fonctionnement__list .list__procedure:nth-child(4) {
+.fonctionnement__list .list__procedure:nth-child(3) {
   background-color: #f5edff;
 }
-.fonctionnement__list .list__procedure:nth-child(4) i {
+.fonctionnement__list .list__procedure:nth-child(3) i {
   color: #9356DC;
 }
 
